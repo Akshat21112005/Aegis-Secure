@@ -1,0 +1,164 @@
+# ==========================================================
+# MODEL SPRINT 4
+# Decision Threshold Configuration
+# ==========================================================
+
+# ==========================================================
+# SEMANTIC MODEL
+# ==========================================================
+
+semantic:
+
+  phishing: 0.80
+
+  suspicious: 0.60
+
+  safe: 0.30
+
+# ==========================================================
+# INFRASTRUCTURE MODEL
+# ==========================================================
+
+infrastructure:
+
+  phishing: 0.80
+
+  suspicious: 0.60
+
+  safe: 0.30
+
+# ==========================================================
+# RUNTIME MODEL
+# ==========================================================
+
+runtime:
+
+  phishing: 0.85
+
+  suspicious: 0.65
+
+  safe: 0.30
+
+# ==========================================================
+# VISUAL MODEL
+# ==========================================================
+
+visual:
+
+  phishing: 0.80
+
+  suspicious: 0.60
+
+  safe: 0.30
+
+# ==========================================================
+# FUSION MODEL
+# ==========================================================
+
+fusion:
+
+  phishing: 0.90
+
+  suspicious: 0.70
+
+  safe: 0.30
+
+# ==========================================================
+# FINAL DECISION
+# ==========================================================
+
+decision:
+
+  minimum_specialists: 3
+
+  minimum_confidence: 0.60
+
+  allow_partial_evidence: true
+
+  continue_on_missing_specialist: true
+
+# ==========================================================
+# URL DISCOVERY
+# ==========================================================
+
+urls:
+
+  maximum_urls_per_email: 20
+
+  minimum_url_length: 8
+
+# ==========================================================
+# PLAYWRIGHT
+# ==========================================================
+
+playwright:
+
+  maximum_redirects: 10
+
+  maximum_requests: 500
+
+  maximum_responses: 500
+
+  maximum_dom_nodes: 50000
+
+# ==========================================================
+# RUNTIME ANALYSIS
+# ==========================================================
+
+runtime_analysis:
+
+  suspicious_redirect_chain: 5
+
+  suspicious_downloads: 1
+
+  suspicious_permission_requests: 2
+
+  suspicious_password_forms: 1
+
+# ==========================================================
+# VISUAL ANALYSIS
+# ==========================================================
+
+visual_analysis:
+
+  minimum_ocr_confidence: 0.75
+
+  minimum_logo_similarity: 0.85
+
+  minimum_qr_confidence: 0.90
+
+# ==========================================================
+# INFRASTRUCTURE ANALYSIS
+# ==========================================================
+
+infrastructure_analysis:
+
+  minimum_domain_age_days: 30
+
+  maximum_redirect_depth: 5
+
+# ==========================================================
+# FUSION
+# ==========================================================
+
+fusion_analysis:
+
+  minimum_evidence_required: 2
+
+  high_risk_score: 0.90
+
+  medium_risk_score: 0.70
+
+  low_risk_score: 0.30
+
+# ==========================================================
+# CALIBRATION
+# ==========================================================
+
+calibration:
+
+  enabled: true
+
+  use_temperature_scaling: true
+
+  normalize_confidence: true
