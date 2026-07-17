@@ -1,0 +1,210 @@
+# ==========================================================
+# MODEL SPRINT 4
+# Storage Configuration
+# ==========================================================
+
+storage:
+
+  root: "storage"
+
+# ==========================================================
+# DATASETS
+# ==========================================================
+
+datasets:
+
+  root: "datasets"
+
+  semantic:
+
+    raw: "datasets/semantic/raw"
+
+    processed: "datasets/semantic/processed"
+
+    csv: "datasets/semantic/csv"
+
+  infrastructure:
+
+    raw: "datasets/infrastructure/raw"
+
+    processed: "datasets/infrastructure/processed"
+
+    csv: "datasets/infrastructure/csv"
+
+  runtime:
+
+    raw: "datasets/runtime/raw"
+
+    processed: "datasets/runtime/processed"
+
+    csv: "datasets/runtime/csv"
+
+  visual:
+
+    raw: "datasets/visual/raw"
+
+    processed: "datasets/visual/processed"
+
+    csv: "datasets/visual/csv"
+
+  fusion:
+
+    raw: "datasets/fusion/raw"
+
+    processed: "datasets/fusion/processed"
+
+    csv: "datasets/fusion/csv"
+
+# ==========================================================
+# TRAINED MODELS
+# ==========================================================
+
+models:
+
+  root: "storage/models"
+
+  semantic: "storage/models/semantic"
+
+  infrastructure: "storage/models/infrastructure"
+
+  runtime: "storage/models/runtime"
+
+  visual: "storage/models/visual"
+
+  fusion: "storage/models/fusion"
+
+# ==========================================================
+# PLAYWRIGHT ARTIFACTS
+# ==========================================================
+
+playwright:
+
+  root: "storage/artifacts/playwright"
+
+  html: "storage/artifacts/playwright/html"
+
+  dom: "storage/artifacts/playwright/dom"
+
+  screenshots: "storage/artifacts/playwright/screenshots"
+
+  javascript: "storage/artifacts/playwright/javascript"
+
+  requests: "storage/artifacts/playwright/requests"
+
+  responses: "storage/artifacts/playwright/responses"
+
+  redirects: "storage/artifacts/playwright/redirects"
+
+  storage: "storage/artifacts/playwright/storage"
+
+# ==========================================================
+# GENERATED ARTIFACTS
+# ==========================================================
+
+artifacts:
+
+  root: "storage/artifacts"
+
+  predictions: "storage/artifacts/predictions"
+
+  reports: "storage/artifacts/reports"
+
+  exports: "storage/artifacts/exports"
+
+  evidence: "storage/artifacts/evidence"
+
+# ==========================================================
+# CACHE
+# ==========================================================
+
+cache:
+
+  root: "storage/cache"
+
+  playwright: "storage/cache/playwright"
+
+  infrastructure: "storage/cache/infrastructure"
+
+  semantic: "storage/cache/semantic"
+
+  runtime: "storage/cache/runtime"
+
+  visual: "storage/cache/visual"
+
+  fusion: "storage/cache/fusion"
+
+# ==========================================================
+# LOGGING
+# ==========================================================
+
+logs:
+
+  root: "storage/logs"
+
+  application: "storage/logs/application.log"
+
+  inference: "storage/logs/inference.log"
+
+  training: "storage/logs/training.log"
+
+  evaluation: "storage/logs/evaluation.log"
+
+  errors: "storage/logs/errors.log"
+
+# ==========================================================
+# FEEDBACK
+# ==========================================================
+
+feedback:
+
+  root: "storage/feedback"
+
+  predictions: "storage/feedback/predictions"
+
+  user_feedback: "storage/feedback/user_feedback"
+
+# ==========================================================
+# TEMPORARY FILES
+# ==========================================================
+
+temporary:
+
+  root: "storage/tmp"
+
+  downloads: "storage/tmp/downloads"
+
+  uploads: "storage/tmp/uploads"
+
+  extraction: "storage/tmp/extraction"
+
+  screenshots: "storage/tmp/screenshots"
+
+# ==========================================================
+# RETENTION POLICY
+# ==========================================================
+
+retention:
+
+  temporary_hours: 24
+
+  cache_days: 7
+
+  playwright_days: 30
+
+  logs_days: 90
+
+  reports_days: 180
+
+  predictions_days: 30
+
+# ==========================================================
+# BACKUP
+# ==========================================================
+
+backup:
+
+  enabled: false
+
+  directory: "storage/backups"
+
+  keep_last: 5

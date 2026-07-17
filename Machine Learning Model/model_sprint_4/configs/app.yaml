@@ -1,0 +1,77 @@
+# ==========================================================
+# MODEL SPRINT 4
+# Application Configuration
+# ==========================================================
+
+app:
+  name: "AEGIS Secure"
+  version: "4.0.0"
+  environment: "development"
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 1
+  reload: true
+
+api:
+  prefix: "/api/v1"
+  debug: true
+  request_timeout_seconds: 120
+  max_request_size_mb: 100
+
+pipeline:
+  parallel_specialists: true
+  continue_on_specialist_failure: true
+  enable_playwright: true
+  enable_cache: true
+  enable_logging: true
+
+communication:
+  supported_sources:
+    - gmail
+    - sms
+
+  max_urls_per_message: 20
+  max_attachments: 20
+  max_attachment_size_mb: 50
+
+browser:
+  headless: true
+  javascript_enabled: true
+  ignore_https_errors: true
+  viewport:
+    width: 1366
+    height: 768
+
+security:
+  sandbox_browser: true
+  allow_downloads: false
+  follow_redirects: true
+  redact_sensitive_logs: true
+
+logging:
+  level: "INFO"
+
+  console: true
+
+  file: true
+
+  log_directory: "logs/"
+
+performance:
+  max_parallel_urls: 5
+  max_parallel_specialists: 4
+  artifact_cache_enabled: true
+
+development:
+  save_playwright_artifacts: true
+  save_screenshots: true
+  save_html: true
+  save_network_logs: true
+
+production:
+  save_playwright_artifacts: false
+  save_screenshots: false
+  save_html: false
+  save_network_logs: false

@@ -1,0 +1,128 @@
+# ==========================================================
+# MODEL SPRINT 4
+# Model Configuration
+# ==========================================================
+
+semantic:
+
+  enabled: true
+
+  name: "deberta-v3-base"
+
+  provider: "huggingface"
+
+  task: "semantic_understanding"
+
+  base_model: "microsoft/deberta-v3-base"
+
+  adapter_path: "semantic/model/adapter"
+
+  tokenizer_path: "semantic/model/tokenizer"
+
+  device: "cuda"
+
+  precision: "fp16"
+
+  max_sequence_length: 512
+
+  batch_size: 16
+
+
+infrastructure:
+
+  enabled: true
+
+  name: "qwen2.5-0.5b"
+
+  provider: "huggingface"
+
+  task: "infrastructure_analysis"
+
+  base_model: "Qwen/Qwen2.5-0.5B-Instruct"
+
+  adapter_path: "infrastructure/model/adapter"
+
+  tokenizer_path: "infrastructure/model/base"
+
+  device: "cuda"
+
+  precision: "fp16"
+
+  max_sequence_length: 1024
+
+  batch_size: 4
+
+
+runtime:
+
+  enabled: true
+
+  name: "qwen2.5-0.5b"
+
+  provider: "huggingface"
+
+  task: "runtime_behavior"
+
+  base_model: "Qwen/Qwen2.5-0.5B-Instruct"
+
+  adapter_path: "runtime/model/adapter"
+
+  tokenizer_path: "runtime/model/base"
+
+  device: "cuda"
+
+  precision: "fp16"
+
+  max_sequence_length: 1024
+
+  batch_size: 4
+
+
+visual:
+
+  enabled: true
+
+  name: "qwen2.5-vl-3b"
+
+  provider: "huggingface"
+
+  task: "visual_reasoning"
+
+  base_model: "Qwen/Qwen2.5-VL-3B-Instruct"
+
+  adapter_path: "visual/model/adapter"
+
+  tokenizer_path: "visual/model/base"
+
+  device: "cuda"
+
+  precision: "fp16"
+
+  max_sequence_length: 1024
+
+  batch_size: 2
+
+
+fusion:
+
+  enabled: true
+
+  name: "qwen2.5-0.5b"
+
+  provider: "huggingface"
+
+  task: "evidence_reasoning"
+
+  base_model: "Qwen/Qwen2.5-0.5B-Instruct"
+
+  adapter_path: "fusion/model/adapter"
+
+  tokenizer_path: "fusion/model/base"
+
+  device: "cuda"
+
+  precision: "fp16"
+
+  max_sequence_length: 2048
+
+  batch_size: 2

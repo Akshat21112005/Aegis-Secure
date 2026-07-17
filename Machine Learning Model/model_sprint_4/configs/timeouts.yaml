@@ -1,0 +1,128 @@
+# ==========================================================
+# MODEL SPRINT 4
+# Timeout Configuration (Seconds)
+# ==========================================================
+
+# ==========================================================
+# API
+# ==========================================================
+
+api:
+
+  request: 120
+
+  response: 120
+
+# ==========================================================
+# INGESTION
+# ==========================================================
+
+ingestion:
+
+  gmail_parser: 10
+
+  mime_parser: 20
+
+  attachment_parser: 30
+
+# ==========================================================
+# URL DISCOVERY
+# ==========================================================
+
+url_discovery:
+
+  extraction: 10
+
+  canonicalization: 5
+
+# ==========================================================
+# PLAYWRIGHT
+# ==========================================================
+
+playwright:
+
+  browser_launch: 20
+
+  page_navigation: 30
+
+  page_load: 30
+
+  dom_collection: 20
+
+  javascript_collection: 20
+
+  network_collection: 20
+
+  screenshot_capture: 15
+
+  pdf_processing: 20
+
+  total_per_url: 90
+
+# ==========================================================
+# INFRASTRUCTURE COLLECTORS
+# ==========================================================
+
+infrastructure:
+
+  whois: 15
+
+  dns: 10
+
+  tls: 10
+
+  email_auth: 10
+
+  reputation: 15
+
+  asn: 10
+
+# ==========================================================
+# SPECIALIST MODELS
+# ==========================================================
+
+semantic:
+
+  preprocessing: 5
+
+  inference: 10
+
+runtime:
+
+  preprocessing: 10
+
+  inference: 15
+
+visual:
+
+  preprocessing: 15
+
+  inference: 20
+
+fusion:
+
+  inference: 15
+
+# ==========================================================
+# PIPELINE
+# ==========================================================
+
+pipeline:
+
+  evidence_collection: 10
+
+  response_generation: 10
+
+  complete_pipeline: 180
+
+# ==========================================================
+# STORAGE
+# ==========================================================
+
+storage:
+
+  artifact_write: 15
+
+  cache_write: 5
+
+  report_generation: 20

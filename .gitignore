@@ -71,3 +71,12 @@ BACKEND_CHANGES.md
 SETUP_AND_GIT.md
 
 .venv
+
+# Large datasets
+/datasets/
+
+# Local trained models
+/models/
+
+# Model archives
+models.zip
